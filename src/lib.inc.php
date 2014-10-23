@@ -1,7 +1,7 @@
 <?php
 
     define( DEVELOPER_KEY, '*' ); // define developer key constant
-    define( DRIVER_LOC, 'https://guard-qpc23.cf/api/driver.php?key=' . DEVELOPER_KEY ); // define base for driver requests
+    define( DRIVER_LOC, 'https://guard-qpc23.cf/apps.driver?key=' . DEVELOPER_KEY ); // define base for driver requests
     
     set_include_path( $_SERVER['DOCUMENT_ROOT'] );
     
