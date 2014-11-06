@@ -104,12 +104,6 @@
                     </label>
                 </p>
                 <p class="input section">
-                    <label for="password">
-                        Password<br />
-                        <input id="password" class="input textbox" type="password" name="password" />
-                    </label>
-                </p>
-                <p class="input section">
                     <label for="credit">
                         Credit<br />
                         <input id="credit" class="input textbox" type="text" name="credit" />
@@ -136,7 +130,7 @@
 </script>
 ";
                     else:
-                        $result = \Modules\User\Credit::transfer( $user, $_POST['secret'], $_POST['password'], $_POST['credit'], $_POST['recipient'] );
+                        $result = \Modules\User\Credit::transfer( $user, $_POST['secret'], $_POST['credit'], $_POST['recipient'] );
                         if ( !$result ):
                             echo "
 <script>
