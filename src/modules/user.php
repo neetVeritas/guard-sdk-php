@@ -4,7 +4,7 @@
     
     class Credit {
         
-        public static function transfer($user, $cred_secret, $password, $credit, $recipient) {
+        public static function transfer($user, $cred_secret, $credit, $recipient) {
             $params = array(
                 'mod' => 'user',
                 'user' => $user->credentials['username'],
@@ -12,9 +12,8 @@
                 'cmd' => 'credit', // specify module command
                 'act' => 'transfer', // specify sub command
                 'secret' => $cred_secret, // with automatically update after successful transfer
-                'a' => $password, // specify forum password
-                'b' => $credit, // specify amount of credit to transfer
-                'c' => $recipient // specify recipient
+                'a' => $credit, // specify amount of credit to transfer
+                'b' => $recipient // specify recipient
             );
             $result = \Tools\Utility::request( $params );
             return $result->error === null?true:false;
